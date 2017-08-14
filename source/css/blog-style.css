@@ -60,6 +60,30 @@ hr{
     padding-left: 0;
 }
 
+.archive-list{
+  padding-left: 0;
+  padding-right: 6px;
+}
+.archive-list-item{
+  list-style: none;
+  text-align: center;
+}
+.archive-list-link{
+  display: block;
+}
+.archive-list-count{
+  display: block;
+  padding-left: 100px;
+  margin-top: -22px;
+  font-size: 12px;
+}
+.archive-list-count:before{
+  content: '(';
+}
+.archive-list-count:after{
+  content: ')';
+}
+
 body {
     line-height: 1.7;
     font-size: 16px;
