@@ -24,15 +24,16 @@
         window.console.error('Algolia Settings are invalid.');
         return;
       }
+      var doSearch = _.debounce(function(helper){
+        helper.search();
+      }, 500);
       var search = instantsearch({
         appId: algoliaSettings.applicationID,
         apiKey: algoliaSettings.apiKey,
         indexName: algoliaSettings.indexName,
         searchFunction: function(helper){
           var searchInput = $('#algolia-search-input').find('input');
-          if (searchInput.val()){
-            helper.search();
-          }
+          if (searchInput.val()) doSearch(helper);
         }
       });
       // Registering Widgets
