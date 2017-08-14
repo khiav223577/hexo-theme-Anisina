@@ -97,16 +97,16 @@ layout: layout
                 <% } %>
 
                 <ul class="pager">
-                    <% if (page.prev){ %>
+                    <% if (page.next){ %>
                     <li class="previous">
-                        <a href="<%- config.root %><%- page.prev.path %>" data-toggle="tooltip" data-placement="top"
-                           title="<%- page.prev.title %>">&larr; Previous Post</a>
+                        <a href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top"
+                           title="<%- page.next.title %>">&larr; Previous Post</a>
                     </li>
                     <% } %>
-                    <% if (page.next){ %>
+                    <% if (page.prev){ %>
                     <li class="next">
-                        <a href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top"
-                           title="<%- page.next.title %>">Next Post &rarr;</a>
+                        <a href="<%- config.root %><%- page.prev.path %>" data-toggle="tooltip" data-placement="top"
+                           title="<%- page.prev.title %>">Next Post &rarr;</a>
                     </li>
                     <% } %>
                 </ul>
