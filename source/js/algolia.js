@@ -47,7 +47,7 @@
           templates:{
             item: function(data){
               return (
-                '<a href="' + CONFIG.root + data.slug + '" class="algolia-hit-item-link">' +
+                '<a href="' + CONFIG.root + data.path + '" class="algolia-hit-item-link">' +
                 data._highlightResult.title.value +
                 '</a>'
               );
