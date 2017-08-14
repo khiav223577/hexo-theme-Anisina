@@ -34,9 +34,9 @@ hr{
     color: #0085a1 !important;
 }
 
-.sidebar-container .tags a {
-    border-color: #bfbfbf;
-}
+//.sidebar-container .tags a {
+//    border-color: #bfbfbf;
+//}
 
 .sidebar-container .tags a:hover,
 .sidebar-container .tags a:active {
