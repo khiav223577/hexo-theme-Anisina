@@ -63,7 +63,7 @@ layout: layout
 					<% lastMonth = month; %>
 					<div class="archive archive-month" data-date="<%= post.date.format('YYYYMM') %>">
 						<h3 class="archive-title">
-							<a href="<%- url_for(config.archive_dir + '/' + post.date.format('YYYY/MM')) %>"><%=  month %></a>
+							<a href="<%- url_for(config.archive_dir + '/' + post.date.format('YYYY/MM')) %>"><%= parseInt(month) %>月</a>
 						</h3>
 				<% } %>
 				<div class="one-tag-list">
