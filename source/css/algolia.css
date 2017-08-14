@@ -16,6 +16,9 @@ a.search-result {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.algolia-hit-item-link em{
+  color: #cc1a1a;
+}
 .search-keyword {
   border-bottom: 1px dashed #4088b8;
   font-weight: bold;
