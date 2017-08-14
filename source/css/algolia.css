@@ -121,6 +121,9 @@ a.search-result {
 .algolia-popup {
   overflow: hidden;
   padding: 0;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
 .algolia-popup .popup-btn-close {
   padding-left: 15px;
@@ -207,9 +210,6 @@ a.search-result {
 }
 .algolia-pagination .disabled-item {
   visibility: hidden;
-}
-.fa-search::before{
-  color: #999999;
 }
 
 
