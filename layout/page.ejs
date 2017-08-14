@@ -242,37 +242,48 @@ layout: layout
                 </div>
             </section>
 
-            <!-- Featured Tags  标签 -->
-            <% if(config['featured-tags']) { %>
+          <% /*------- 標籤雲 -------*/ %>
+          <% if(config['featured-tags']){ %>
             <section>
-                <div class="tags">
-                    <% site.tags.map(function(tag){ %>
-                    <% if(tag.length > config['featured-condition-size']) { %>
-                    <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"
-                       rel="<%= tag.length %>"><%= tag.name %></a>
-                    <% } %>
-                    <% }) %>
-                </div>
+              <div class="tags">
+              <% site.tags.map(function(tag){ %>
+                <% if(tag.length > config['featured-condition-size']){ %>
+                <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>"><%= tag.name %></a>
+                <% } %>
+              <% }) %>
+              </div>
             </section>
-            <% } %>
-
-            <% if(config.friends) { %>
-            <hr>
-            <h5 style="text-align: center;">友情連結</h5>
-            <ul class="list-inline" style="text-align: center;">
+          <% } %>
+          <% /*------- 友情連結 -------*/ %>
+          <% if(config.friends) { %>
+            <section>
+              <hr>
+              <h5 style="text-align: center;">友情連結</h5>
+              <ul class="list-inline" style="text-align: center;">
                 <% config.friends.forEach(function(friend){ %>
                 <li><a href="<%= friend.href %>" target="_blank"><%= friend.title %></a></li>
                 <% }); %>
-            </ul>
-            <% } %>
-
-        <% if (site.posts.length){ %>
-          <hr>
-          <h5 style="text-align: center;">所有文章</h5>
-          <div class="widget tag">
-            <%- list_archives({format: "YYYY年MM月"}) %>
-          </div>
-        <% } %>
+              </ul>
+            </section>
+          <% } %>
+          <% /*------- 最新文章 -------*/ %>
+            <section>
+              <hr>
+              <h5 style="text-align: center;">最新文章</h5>
+              <div class="widget tag">
+                <%- list_posts() %>
+              </div>
+            </section>
+          <% /*------- 所有文章 -------*/ %>
+          <% if (site.posts.length){ %>
+            <section>
+              <hr>
+              <h5 style="text-align: center;">所有文章</h5>
+              <div class="widget tag">
+                <%- list_archives({format: "YYYY年MM月"}) %>
+              </div>
+            </section>
+          <% } %>
 
         </div>
     </div>
