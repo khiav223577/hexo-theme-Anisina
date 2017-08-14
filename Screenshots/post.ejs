@@ -175,7 +175,7 @@ layout: layout
                 <section>
                     <!-- no hr -->
                     <h5 class="text-center">
-                        <a href="<%= config.root %>tags/">標籤雲</a>
+                        <a href="<%= config.root %>tags/">FEATURED TAGS</a>
                     </h5>
                     <div class="tags">
                         <% page.tags.forEach(function(tag){ %>
@@ -189,7 +189,7 @@ layout: layout
                 <!-- Friends Blog -->
                 <% if(config.friends) { %>
                 <div style="margin-top: 20px;">
-                    <h5 class="text-center">友情連結</h5>
+                    <h5 class="text-center">FRIENDS</h5>
                     <ul class="list-inline text-center">
                         <% config.friends.forEach(function(friend){ %>
                         <li><a href="<%= friend.href %>"><%= friend.title %></a></li>
