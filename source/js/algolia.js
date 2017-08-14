@@ -7,13 +7,13 @@
   function onReady(){
     $(document).ready(function(){
       var CONFIG ={
-        root: '/',
+        root: '/blog/',
         algolia:{
-          applicationID: 'applicationID',
-          apiKey: 'apiKey',
-          indexName: 'indexName',
-          hits:{ "per_page": 10 },
-          labels:{ "input_placeholder": "Searching...", "hits_empty": "未发现与 「${query}」相关的内容", "hits_stats": "${hits} 条相关条目，使用了 ${time} 毫秒" }
+          applicationID: 'XDG1C6ASA4',
+          apiKey: 'eebdd0f1174b77269d954813961815bc',
+          indexName: 'khiav-hexo-blog',
+          hits:{ per_page: 10 },
+          labels:{ "input_placeholder": "輸入搜尋內容", "hits_empty": "找不到「${query}」", "hits_stats": "找到 ${hits} 條相關條目，花費 ${time} 亳秒" }
         }
       };
       var algoliaSettings = CONFIG.algolia;
@@ -74,7 +74,7 @@
               return (
                 stats +
                 '<span class="algolia-powered">' +
-                '  <img src="' + CONFIG.root + 'images/algolia_logo.svg" alt="Algolia" />' +
+                '  <img src="' + CONFIG.root + 'imgs/algolia_logo.svg" alt="Algolia" />' +
                 '</span>' +
                 '<hr />'
               );
