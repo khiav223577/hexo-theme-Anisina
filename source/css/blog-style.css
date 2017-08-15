@@ -1146,10 +1146,9 @@ img::-moz-selection {
     border-radius: 3px;
     background: black;
     color: white;
-    padding-bottom: 3px;
-    padding-left: 5px;
+    margin-left: 2px;
     margin-right: 5px;
-    padding-top: 1px;
+    padding: 2px 6px 2px 1px;
 }
 
 .navbar-custom.is-fixed .navbar-brand,
