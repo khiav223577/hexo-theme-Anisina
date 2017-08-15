@@ -1,3 +1,4 @@
+<% title = (page.title && (page.title + '｜' + config.SEOTitle) || config.SEOTitle) %>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,17 @@
     <meta name="msapplication-navbutton-color" content="#600090">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+
+    <meta property="og:image" content="<%- config['sidebar-avatar'] %>" />
+    <meta property="og:image" content="<%- config['post-default-img'] %>" />
+    <%- open_graph({title: title}) %>
+
     <link rel="shortcut icon" href="<%- config.favicon || 'https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png' %>">
     <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="/atom.xml">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
-        <% if (page.title) { %>
-        <%= page.title + '｜' + config.SEOTitle %>
-        <% } else{ %>
-        <%= config.SEOTitle %>
-        <% } %>
+        <%= title %>
     </title>
 
     <link rel="canonical" href="<%= config.url + config.root + (page.path || '').replace('index.html', '') %>">
