@@ -161,45 +161,6 @@ layout: layout
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <!-- Sidebar Container -->
-
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                <% if(config['featured-tags']) { %>
-                <section>
-                    <!-- no hr -->
-                    <h5 class="text-center">
-                        <a href="<%= config.root %>tags/">標籤雲</a>
-                    </h5>
-                    <div class="tags">
-                        <% page.tags.forEach(function(tag){ %>
-                        <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>"
-                           title="<%= tag.name %>"><%= tag.name %></a>
-                        <% }) %>
-                    </div>
-                </section>
-                <% } %>
-
-                <!-- Friends Blog -->
-                <% if(config.friends) { %>
-                <div style="margin-top: 20px;">
-                    <h5 class="text-center">友情連結</h5>
-                    <ul class="list-inline text-center">
-                        <% config.friends.forEach(function(friend){ %>
-                        <li><a href="<%= friend.href %>"><%= friend.title %></a></li>
-                        <% }); %>
-                    </ul>
-                </div>
-                <% } %>
-            </div>
-        </div>
-
     </div>
 </article>
 
