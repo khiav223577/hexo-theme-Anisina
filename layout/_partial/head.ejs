@@ -33,9 +33,11 @@
     <!-- Pygments Github CSS -->
     <%- css('css/syntax') %>
 
-    <%- css('css/algolia') %>
-    <%- js('js/algolia') %>
-    <%- js('js/instantsearch.min') %>
+    <% if (config.algolia){ %>
+      <%- css('css/algolia') %>
+      <%- js('js/algolia') %>
+      <%- js('js/instantsearch.min') %>
+    <% } %>
 
     <%- js('js/lodash.min') %>
 </head>
