@@ -7,12 +7,17 @@
       diff,
       context,
       args,
-      exec = function(){
+      clean = function(){
+        if (timer) clearTimeout(timer);
+        timer = null;
         last_exec = curr;
         last_call = null;
+      }
+      exec = function(){
+        clean();
         fn.apply(context, args);
       };
-    return function(){
+    var func = function(){
       curr= +new Date();
       if (last_call == null) last_call = curr;
       context = this,
@@ -33,7 +38,10 @@
         }
       }
       last_call = curr;
-    }
+    };
+    func.cancel = function(){ clean(); };
+    func.flush = function(){ exec(); };
+    return func;
   };
 
   var debounce = function(fn, delay, immediate){
@@ -76,6 +84,7 @@
         searchFunction: function(helper){
           var searchInput = $('#algolia-search-input').find('input');
           if (searchInput.val()) doSearch(helper);
+          else doSearch.cancel();
         }
       });
       // Registering Widgets
