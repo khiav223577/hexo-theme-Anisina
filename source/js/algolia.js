@@ -1,9 +1,51 @@
 ;(function(){
+  var throttle = function(fn, delay, immediate, debounce){
+    var curr = +new Date(),
+      last_call = null,
+      last_exec = 0,
+      timer = null,
+      diff,
+      context,
+      args,
+      exec = function(){
+        last_exec = curr;
+        last_call = null;
+        fn.apply(context, args);
+      };
+    return function(){
+      curr= +new Date();
+      if (last_call == null) last_call = curr;
+      context = this,
+        args = arguments,
+        diff = curr - (debounce ? last_call : last_exec) - delay;
+      clearTimeout(timer);
+      if (debounce){
+        if (immediate || diff >= 0){
+          exec();
+        }else{
+          timer = setTimeout(exec, delay);
+        }
+      }else{
+        if (diff >= 0){
+          exec();
+        }else if (immediate){
+          timer = setTimeout(exec, -diff);
+        }
+      }
+      last_call = curr;
+    }
+  };
+
+  var debounce = function(fn, delay, immediate){
+    return throttle(fn, delay, immediate, true);
+  };
+
   var t = setInterval(function(){
     if (typeof($) === 'undefined') return;
     onReady();
     clearInterval(t);
-  }, 100)
+  }, 100);
+
   function onReady(){
     $(document).ready(function(){
       var CONFIG ={
@@ -24,7 +66,7 @@
         window.console.error('Algolia Settings are invalid.');
         return;
       }
-      var doSearch = _.debounce(function(helper){
+      var doSearch = debounce(function(helper){
         helper.search();
       }, 500);
       var search = instantsearch({
