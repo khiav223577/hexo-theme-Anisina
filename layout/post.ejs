@@ -39,10 +39,20 @@ layout: layout
                     <h2 class="subheading"><%= page.subtitle %></h2>
                     <% } %>
                     <span class="meta">
-                         作者 <%- page.author || config.author %>
-                        <span>
-                          日期 <%= page.date.format(config.date_format) %>
-                         </span>
+                      <span>
+                        作者 <%- page.author || config.author %>
+                      </span>
+                      <span class="spliter">|</span>
+                      <span>
+                        日期 <%= page.date.format(config.date_format) %>
+                      </span>
+                      <span class="spliter">|</span>
+                      <span id="busuanzi_container_page_pv">
+                        <i class="fa fa-eye"></i>
+                        <span id="busuanzi_value_page_pv">
+                          <i class="fa fa-spinner fa-spin"></i>
+                        </span>
+                      </span>
                     </span>
                     <div class="tags text-center">
                         <% page.tags.forEach(function(tag){ %>

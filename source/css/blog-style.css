@@ -479,8 +479,8 @@ article blockquote cite:before{
     color: #eee;
 }
 
-.intro-header .post-heading .meta span {
-    padding-left: 1em;
+.intro-header .post-heading .spliter {
+  margin: 0 10px;
 }
 
 @media only screen and (min-width: 768px) {
