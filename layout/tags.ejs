@@ -46,7 +46,11 @@ layout: layout
             <% site.tags.map(function(tag){ %>
             <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="<%= tag.name %>">
-                    <span class="tag-text"><%= tag.name %></span>
+                    <a href="<%= tag.name %>" style="color: inherit;">
+                      <span class="tag-text">
+                        <%= tag.name %>
+                      </span>
+                    </a>
                 </span>
                 <% tag.posts.map(function(post){ %>
                 <div class="post-preview">
