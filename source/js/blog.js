@@ -58,7 +58,9 @@ function scrollCheck(scrollTarget, toggleClass, scrollHeight){
 
 //主页
 (function(){
-    if(!isPages('data-ispost')){
+    var largeBanner = isPages('data-ispost') || isPages('data-istags');
+    console.log(largeBanner)
+    if (!largeBanner){
         var navbar = document.querySelector('.navbar.navbar-custom')
         navbar.classList.add('is-fixed');
     }
@@ -75,7 +77,8 @@ function scrollCheck(scrollTarget, toggleClass, scrollHeight){
     博文页面
 */
 (function(){
-    if (isPages('data-ispost')){
+    var largeBanner = isPages('data-ispost') || isPages('data-istags');
+    if (largeBanner){
         var navbar = document.querySelector('.navbar-custom');
         var introHeader = document.querySelector('.intro-header').offsetHeight;
         var introHeader = introHeader > 497 ? introHeader : 400;
