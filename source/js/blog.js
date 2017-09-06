@@ -48,6 +48,7 @@ function isPages(attr){
         3 触发的高度 (可选项,如果不指定高度,会将DOM的高度作为触发高度)
 */
 function scrollCheck(scrollTarget, toggleClass, scrollHeight){
+    if (scrollTarget == null) return;
     document.addEventListener('scroll',function(){
     var currentTop = window.pageYOffset;
         currentTop > (scrollHeight||scrollTarget.clientHeight)
@@ -56,11 +57,14 @@ function scrollCheck(scrollTarget, toggleClass, scrollHeight){
     })
 }
 
+function shouldShowDynamicNav(){
+  if (isPages('data-ishome')) return false;
+  return true;
+}
+
 //主页
 (function(){
-    var largeBanner = isPages('data-ispost') || isPages('data-istags');
-    console.log(largeBanner)
-    if (!largeBanner){
+    if (!shouldShowDynamicNav()){
         var navbar = document.querySelector('.navbar.navbar-custom')
         navbar.classList.add('is-fixed');
     }
@@ -77,8 +81,7 @@ function scrollCheck(scrollTarget, toggleClass, scrollHeight){
     博文页面
 */
 (function(){
-    var largeBanner = isPages('data-ispost') || isPages('data-istags');
-    if (largeBanner){
+    if (shouldShowDynamicNav()){
         var navbar = document.querySelector('.navbar-custom');
         var introHeader = document.querySelector('.intro-header').offsetHeight;
         var introHeader = introHeader > 497 ? introHeader : 400;
