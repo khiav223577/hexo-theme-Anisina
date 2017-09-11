@@ -8,12 +8,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
 
-    <meta property="og:image" content="<%- config['sidebar-avatar'] %>" />
-    <meta property="og:image" content="<%- config['post-default-img'] %>" />
   <% if (page['header-img']){ %>
     <meta property="og:image" content="<%- page['header-img'] %>" />
   <% } %>
-    <%- open_graph({title: title}) %>
+    <meta property="og:image" content="<%- config['sidebar-avatar'] %>" />
+    <meta property="og:image" content="<%- config['post-default-img'] %>" />
+
+    <%- open_graph({title: title, fb_app_id: config['fb_app_id']}) %>
 
     <link rel="shortcut icon" href="<%- config.favicon || 'https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png' %>">
     <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="/atom.xml">
