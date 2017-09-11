@@ -9,10 +9,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
 
   <% if (page['header-img']){ %>
-    <meta property="og:image" content="<%- page['header-img'] %>" />
+    <meta property="og:image" content="<%- config['url'] + page['header-img'] %>" />
   <% } %>
     <meta property="og:image" content="<%- config['sidebar-avatar'] %>" />
-    <meta property="og:image" content="<%- config['post-default-img'] %>" />
+    <meta property="og:image" content="<%- config['url'] + config['post-default-img'] %>" />
 
     <%- open_graph({title: title, fb_app_id: config['fb_app_id']}) %>
 
