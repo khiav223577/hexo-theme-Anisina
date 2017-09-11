@@ -10,6 +10,9 @@
 
     <meta property="og:image" content="<%- config['sidebar-avatar'] %>" />
     <meta property="og:image" content="<%- config['post-default-img'] %>" />
+  <% if (page['header-img']){ %>
+    <meta property="og:image" content="<%- page['header-img'] %>" />
+  <% } %>
     <%- open_graph({title: title}) %>
 
     <link rel="shortcut icon" href="<%- config.favicon || 'https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png' %>">
