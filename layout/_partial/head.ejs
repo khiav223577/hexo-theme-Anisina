@@ -32,11 +32,7 @@
     <!-- Custom CSS -->
     <%- css('css/blog-style.css') %>
 
-    <!-- Pygments Github CSS -->
-    <%- css('css/syntax') %>
-
     <% if (config.algolia){ %>
-      <link rel="stylesheet" href="/blog/css/algolia.css" lazyload>
       <script async src="/blog/js/algolia.js"></script>
       <script async src="/blog/js/instantsearch.min.js"></script>
     <% } %>
