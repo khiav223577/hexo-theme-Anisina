@@ -36,8 +36,8 @@
     <%- css('css/syntax') %>
 
     <% if (config.algolia){ %>
-      <%- css('css/algolia') %>
-      <%- js('js/algolia') %>
-      <%- js('js/instantsearch.min') %>
+      <link rel="stylesheet" href="/blog/css/algolia.css" lazyload>
+      <script async src="/blog/js/algolia.js"></script>
+      <script async src="/blog/js/instantsearch.min.js"></script>
     <% } %>
 </head>
