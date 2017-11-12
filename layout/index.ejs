@@ -6,7 +6,7 @@ layout: page
 <% page.posts.each(function(post){ %>
 <%
   preview_text = truncate(strip_html(post.content), {length: 150, omission: '..'});
-  var match, regExp = /(<a[^>]+>([^<]+)<\/a>)/g;
+  var match, regExp = /(<(?:a|code)[^>]*>([^<]+)<\/(?:a|code)>)/g;
   while(match = regExp.exec(post.content)){
     if (preview_text.indexOf(match[2]) == -1) break;
     preview_text = preview_text.replace(match[2], match[1]);
