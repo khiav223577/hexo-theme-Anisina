@@ -4,6 +4,15 @@ layout: page
 <!-- Main Content -->
 
 <% page.posts.each(function(post){ %>
+<%
+  preview_text = truncate(strip_html(post.content), {length: 150, omission: '..'});
+  var match, regExp = /(<a[^>]+>([^<]+)<\/a>)/g;
+  while(match = regExp.exec(post.content)){
+    if (preview_text.indexOf(match[2]) == -1) break;
+    preview_text = preview_text.replace(match[2], match[1]);
+  }
+%>
+
 <% if (post["cdn"] === 'header-off') { %>
 <div class="post-preview  <%- post.layout === 'poetry' ? 'post-preview-poetry' : '' %>"
      style="background-image: url('<%- post["header-img"] || config["post-default-img"] %>')">
@@ -19,9 +28,10 @@ layout: page
             <%- post.subtitle %>
         </h3>
         <% } %>
+    </a>
         <div class="post-content-preview">
             <p>
-                <%- truncate(strip_html(post.content), {length: 150, omission: '..'}) %>
+                <%- preview_text %>
             </p>
         </div>
     </a>
@@ -42,9 +52,10 @@ layout: page
             <%- post.subtitle %>
         </h3>
         <% } %>
+    </a>
         <div class="post-content-preview">
             <p>
-                <%- truncate(strip_html(post.content), {length: 150, omission: '..'}) %>
+                <%- preview_text %>
             </p>
         </div>
     </a>
