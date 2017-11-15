@@ -10,6 +10,10 @@ hr{
     margin:0;
 }
 
+.list-inline{
+  margin-left: 0;
+}
+
 .sidebar-container {
     color: #bfbfbf;
     font-size: 14px;
