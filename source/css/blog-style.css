@@ -208,6 +208,9 @@ pre code {
     color: #337ab7;
 }
 
+.post-content-preview, article {
+  font-family: 微軟正黑體, sans-serif, Menlo, -apple-system,"PingFang SC","Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun
+}
 
 article .post-container h1,
 article .post-container h2,
