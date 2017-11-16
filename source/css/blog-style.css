@@ -15,13 +15,13 @@ hr{
 }
 
 .sidebar-container {
-    color: #bfbfbf;
+    color: #aaa;
     font-size: 14px;
     margin-top: 35px;
 }
 
 .sidebar-container h5 {
-    color: #808080;
+    color: #4e9bab;
 }
 
 .sidebar-container h5 a {
@@ -30,7 +30,7 @@ hr{
 }
 
 .sidebar-container a {
-    color: #bfbfbf !important;
+    color: #aaa !important;
 }
 
 .sidebar-container a:hover,
@@ -101,7 +101,7 @@ hr{
 
 body {
     line-height: 1.7;
-    font-size: 16px;
+    font-size: 18px;
     color: #404040;
     overflow-x: hidden;
     font-family: -apple-system,  "PingFang SC","Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
@@ -119,11 +119,11 @@ h5,
 h6{
     font-weight: 400;
 }
-h2{font-size: 22px}
-h3{font-size: 20px}
-h4{font-size: 18px}
-h5{font-size: 16px}
-h6{font-size: 15px}
+h2{font-size: 24px}
+h3{font-size: 22px}
+h4{font-size: 20px}
+h5{font-size: 18px}
+h6{font-size: 17px}
 article .post-container h2{
     font-weight: 600;
 }
@@ -573,6 +573,7 @@ a:focus {
 }
 
 .post-content-preview p {
+    font-size: 16px;
     color: #555;
 }
 
@@ -1183,7 +1184,8 @@ img::-moz-selection {
     white-space: nowrap;
     text-overflow: ellipsis;
     position: relative;
-    top:57px;
+    top: 40px;
+    line-height: 60px;
 }
 @media screen and (max-width: 1049px){
     .post-title-fixed span{
