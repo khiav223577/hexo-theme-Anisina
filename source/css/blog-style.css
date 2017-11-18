@@ -15,7 +15,7 @@ hr{
 }
 
 .sidebar-container {
-    color: #aaa;
+    color: #888;
     font-size: 14px;
     margin-top: 35px;
 }
@@ -32,7 +32,7 @@ hr{
 }
 
 .sidebar-container a {
-    color: #aaa !important;
+    color: #888 !important;
 }
 .social-links a {
   color: #3b6475 !important;
