@@ -25,14 +25,18 @@ hr{
 }
 
 .sidebar-container h5 a {
-    color: #808080 !important;
+    color: #3b6475 !important;
+    font-weight: 500;
+    font-size: 20px;
     text-decoration: none;
 }
 
 .sidebar-container a {
     color: #aaa !important;
 }
-
+.social-links a {
+  color: #3b6475 !important;
+}
 .sidebar-container a:hover,
 .sidebar-container a:active {
     color: #0085a1 !important;
@@ -105,6 +109,7 @@ body {
     color: #404040;
     overflow-x: hidden;
     font-family: -apple-system,  "PingFang SC","Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    background-color: #fdfdfd;
 }
 
 p {
@@ -447,6 +452,7 @@ article blockquote cite:before{
 .intro-header .page-heading h1,
 .intro-header .post-heading h1 {
     text-shadow: 0 0 40px black;
+    font-weight: 400;
 }
 
 .intro-header .site-heading .subheading,
@@ -490,7 +496,6 @@ article blockquote cite:before{
 }
 
 @media only screen and (min-width: 768px) {
-    .intro-header .post-heading h1,
     .intro-header .post-heading .subheading{
         font-weight: 300;
     }
@@ -526,7 +531,9 @@ article blockquote cite:before{
 a:focus {
     outline: none;
 }
-.post-preview > a > h2{transition: color .3s;}
+.post-preview > a > h2{
+  transition: color .3s;
+}
 .post-preview:not(:first-of-type) > a:hover > h2{
     color: #FC7097;
 }
@@ -1155,7 +1162,7 @@ img::-moz-selection {
     color: white;
     margin-left: 2px;
     margin-right: 5px;
-    padding: 2px 6px 2px 1px;
+    padding: 1px 5px 1px 0px;
 }
 
 .navbar-custom.is-fixed .navbar-brand,
@@ -1217,6 +1224,10 @@ img::-moz-selection {
     margin-bottom: 0;
     font-weight: 200;
     text-shadow: 0 0 1px rgba(0,0,0,.15);
+}
+.post-container .post-preview > a > .post-title{
+  font-weight: 400;
+  color: #3b6475;
 }
 @media screen and (max-width: 500px) {
     .post-title-fixed span{
