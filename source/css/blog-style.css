@@ -25,8 +25,8 @@ hr{
 }
 
 .sidebar-container h5 a {
-    color: #3b6475 !important;
-    font-weight: 500;
+    color: #555 !important;
+    font-weight: 700;
     font-size: 20px;
     text-decoration: none;
 }
@@ -35,7 +35,7 @@ hr{
     color: #888 !important;
 }
 .social-links a {
-  color: #3b6475 !important;
+  color: #888 !important;
 }
 .sidebar-container a:hover,
 .sidebar-container a:active {
