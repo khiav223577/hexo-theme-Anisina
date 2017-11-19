@@ -350,7 +350,6 @@ article blockquote cite:before{
     color: white;
     height: 56px;
     line-height: 25px;
-
 }
 
 .navbar-custom .navbar-brand:hover {
@@ -380,7 +379,6 @@ article blockquote cite:before{
     }
     .navbar-custom .navbar-brand {
         color: white;
-        padding: 20px;
         line-height: 17px;
     }
     .navbar-custom .navbar-brand:hover,
@@ -1160,9 +1158,11 @@ img::-moz-selection {
     border-radius: 3px;
     background: black;
     color: white;
-    margin-left: 2px;
-    margin-right: 5px;
-    padding: 1px 5px 1px 0px;
+    margin-left: 3px;
+    padding: 0 5px 0 5px;
+    display: inline-block;
+    height: 27px; /* 避免不同字型導致高度不一致 */
+    line-height: 27px;
 }
 
 .navbar-custom.is-fixed .navbar-brand,
