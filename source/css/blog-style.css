@@ -109,7 +109,7 @@ body {
     color: #404040;
     overflow-x: hidden;
     font-family: -apple-system,  "PingFang SC","Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
-    background-color: #fdfdfd;
+    background-color: #fbfbfb;
 }
 
 p {
@@ -1220,7 +1220,7 @@ img::-moz-selection {
 }
 .post-container .post-preview > a > .post-title{
   font-weight: 400;
-  color: #3b6475;
+  color: #233c46;
 }
 @media screen and (max-width: 500px) {
     .post-title-fixed span{
