@@ -1127,7 +1127,6 @@ img::-moz-selection {
     max-height: 81%;
     overflow: auto;
     z-index:1;
-    background-color: #fff;
 }
 
 .navbar-custom.is-fixed {
