@@ -471,7 +471,7 @@ article blockquote cite:before{
 .intro-header .post-heading h1 {
     margin-top: 0;
     font-size: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 0;
     text-align: center;
 }
 
@@ -484,6 +484,8 @@ article blockquote cite:before{
 }
 
 .intro-header .post-heading .meta {
+    display: inline-block;
+    margin-top: 20px;
     font-weight: 300;
     font-size: 14px;
     color: #eee;
