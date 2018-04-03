@@ -1588,11 +1588,11 @@ figure.highlight .line {
   color: #00f;
 }
 
-.prettyprint .lit {
+.prettyprint .lit, .prettyprint .dec, .prettyprint .var {
   color: #9A144A;
 }
 
-.prettyprint .pun {
+.prettyprint .pun, .prettyprint .clo, .prettyprint .opn {
   color: #0080FF;
 }
 
@@ -1601,9 +1601,21 @@ figure.highlight .line {
   color: #800F3F;
 }
 
-.prettyprint .str {
+.prettyprint .str, .prettyprint .atv {
   color: #800080;
 }
+
+
+.prettyprint .pln, .prettyprint .tag, .prettyprint .atn, .prettyprint .fun {
+  color: #000;
+}
+
+@media print,projection{.kwd,.tag,.typ{font-weight:700}}
+pre.prettyprint{padding:2px;border:1px solid #888}
+ol.linenums{margin-top:0;margin-bottom:0}
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}
+li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
+
 /* ------------- highlightjs ------------- */
 /*
 pre .comment {
