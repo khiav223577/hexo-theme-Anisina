@@ -1600,6 +1600,10 @@ figure.highlight .line {
   font-weight: bold;
   color: #800F3F;
 }
+
+.prettyprint .str {
+  color: #800080;
+}
 /* ------------- highlightjs ------------- */
 /*
 pre .comment {
