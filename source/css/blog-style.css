@@ -1578,6 +1578,30 @@ figure.highlight .code {
 figure.highlight .line {
   height: 20px;
 }
+/* ------------- prettyprint ------------- */
+.prettyprint .com {
+  color: #006C00;
+  font-style: italic;
+}
+
+.prettyprint .kwd {
+  color: #00f;
+}
+
+.prettyprint .lit {
+  color: #9A144A;
+}
+
+.prettyprint .pun {
+  color: #0080FF;
+}
+
+.prettyprint .typ {
+  font-weight: bold;
+  color: #800F3F;
+}
+/* ------------- highlightjs ------------- */
+/*
 pre .comment {
   color: #006c00;
   font-style: italic;
@@ -1663,5 +1687,6 @@ pre .deletion {
 .gutter {
   width: 70px;
 }
+*/
 
 
