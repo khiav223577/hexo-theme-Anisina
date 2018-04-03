@@ -208,3 +208,12 @@
 <% } %>
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<% if (config.highlight.script){ %>
+  <script src="<%= config.highlight.script %>"></script>
+  <script>
+    $(function(){
+      $('pre > code').removeClass('rb').addClass('prettyprint');
+      PR.prettyPrint();s
+    });
+  </script>
+<% } %>
