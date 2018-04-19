@@ -1,4 +1,12 @@
-<% title = (page.title && (page.title + '｜' + config.SEOTitle) || config.SEOTitle) %>
+<% 
+  title = (
+    page.title && (
+      page.title + 
+      (page.subtitle ? '｜' + String(page.subtitle) : '') + 
+      '｜' + 
+      config.SEOTitle
+    ) || config.SEOTitle) 
+%>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
