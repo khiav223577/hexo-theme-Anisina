@@ -5,6 +5,9 @@
     }
 }
 
+.anchorjs-link {
+  padding-right: 10px;
+}
 
 hr{
     margin:0;
