@@ -116,7 +116,7 @@ body {
 }
 
 p {
-    margin:0 0 20px;
+    margin:0 0 10px;
 }
 
 h1,
@@ -933,11 +933,11 @@ img::-moz-selection {
     .one-tag-list .post-preview .post-meta {
         font-size: 18px;
     }
-	
+
 	.one-archive-list .post-preview {
 		margin-left: 40px;
 	}
-	
+
 	.archive-month {
 		margin-left: 20px;
 	}
