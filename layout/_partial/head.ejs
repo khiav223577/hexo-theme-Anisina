@@ -1,11 +1,11 @@
-<% 
+<%
   title = (
     page.title && (
-      page.title + 
-      (page.subtitle ? '｜' + String(page.subtitle) : '') + 
-      '｜' + 
+      page.title +
+      (page.subtitle ? '｜' + String(page.subtitle) : '') +
+      '｜' +
       config.SEOTitle
-    ) || config.SEOTitle) 
+    ) || config.SEOTitle)
 %>
 <head>
     <meta charset="utf-8">
@@ -32,7 +32,7 @@
         <%= title %>
     </title>
 
-    <link rel="canonical" href="<%= config.url + config.root + (page.path || '').replace('index.html', '') %>">
+    <link rel="canonical" href="<%= config.url + '/' + (page.path || '').replace('index.html', '') %>">
 
     <!-- Bootstrap Core CSS -->
     <%- css('css/bootstrap.min.css') %>

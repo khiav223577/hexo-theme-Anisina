@@ -99,7 +99,7 @@
                     Copyright &copy; <%= config.title %> <%= new Date().getFullYear() %>
                     <br>
                     <span>
-                      <span id="busuanzi_container_site_pv">                      
+                      <span id="busuanzi_container_site_pv">
                         <i class="fa fa-eye" style="margin-right: 3px;" data-toggle="tooltip" title="本站總訪問量"></i>
                         <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>
                       </span>
@@ -109,7 +109,7 @@
                         <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>
                       </span>
                     </span>
-                    
+
                     <br>
                     <br>
                     Theme by <a target="_blank" href="https://haojen.github.io/">Haojen Ma</a>
@@ -145,7 +145,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("<%= config.url%><%= config.root%>js/jquery.tagcloud.js",function(){
+        async("<%= config.url%>/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
