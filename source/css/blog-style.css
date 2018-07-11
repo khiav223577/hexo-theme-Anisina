@@ -1188,19 +1188,19 @@ img::-moz-selection {
 }
 .post-title-fixed span{
     display: inline-block;
-    max-width: 250px;
+    max-width: 400px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     position: relative;
+    margin-left: -160px;
     top: 40px;
     line-height: 60px;
 }
 @media screen and (max-width: 1049px){
     .post-title-fixed span{
-        max-width: 180px;
-        font-size: 15px;
-        margin-left: -160px;
+        max-width: 320px;
+        font-size: 16px;
     }
 }
 
@@ -1212,10 +1212,9 @@ img::-moz-selection {
 
 @media screen and  (max-width: 768px){
     .post-title-fixed span{
-        max-width: 160px;
-        font-size: 14px;
+        max-width: 40%;
+        font-size: 15px;
         margin-left: 0;
-        top: 59px;
         display: inline-block;
     }
 }
