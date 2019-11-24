@@ -1582,36 +1582,72 @@ figure.highlight .code {
 figure.highlight .line {
   height: 20px;
 }
-/* ------------- prettyprint ------------- */
-.prettyprint .com {
+/* ------------- prettyprint ruby ------------- */
+.prettyprint.lang-rb .com {
   color: #006C00;
   font-style: italic;
 }
 
-.prettyprint .kwd {
+.prettyprint.lang-rb .kwd {
   color: #00f;
 }
 
-.prettyprint .lit, .prettyprint .dec, .prettyprint .var {
+.prettyprint.lang-rb .lit, .prettyprin.lang-rbt .dec, .prettyprint.lang-rb .var {
   color: #9A144A;
 }
 
-.prettyprint .pun, .prettyprint .clo, .prettyprint .opn {
+.prettyprint.lang-rb .pun, .prettyprint.lang-rb .clo, .prettyprint.lang-rb .opn {
   color: #0080FF;
 }
 
-.prettyprint .typ {
+.prettyprint.lang-rb .typ {
   font-weight: bold;
   color: #800F3F;
 }
 
-.prettyprint .str, .prettyprint .atv {
+.prettyprint.lang-rb .str, .prettyprint.lang-rb .atv {
   color: #800080;
 }
 
 
-.prettyprint .pln, .prettyprint .tag, .prettyprint .atn, .prettyprint .fun {
+.prettyprint.lang-rb .pln, .prettyprint.lang-rb .tag, .prettyprint.lang-rb .atn, .prettyprint.lang-rb .fun {
   color: #000;
+}
+
+/* ------------- prettyprint js ------------- */
+.prettyprint.lang-js .kwd {
+  color: #00F;
+}
+
+.prettyprint.lang-js .pun, .prettyprint.lang-js .clo, .prettyprint.lang-js .opn {
+  color: #0080FF;
+}
+
+/* ------------- prettyprint html ------------- */
+.prettyprint.lang-html .tag {
+  font-weight: bold;
+}
+
+.prettyprint.lang-html .atn {
+  color: #00F;
+}
+
+/* ------------- prettyprint css ------------- */
+.prettyprint.lang-css .pln {
+  color: black;
+}
+
+.prettyprint.lang-css .lit {
+  color: #9A144A;
+}
+
+.prettyprint.lang-css .kwd {
+  color: #008;
+}
+
+
+.prettyprint.lang-css .pun {
+  color: #0080FF;
 }
 
 @media print,projection{.kwd,.tag,.typ{font-weight:700}}
