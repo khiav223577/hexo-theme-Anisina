@@ -212,6 +212,7 @@ pre code {
     width: auto;
     white-space: pre;
     word-wrap: normal;
+    font-size: 14px;
 }
 
 .post-container a {
