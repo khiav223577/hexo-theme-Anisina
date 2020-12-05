@@ -60,8 +60,8 @@
         var CONFIG ={
           root: '/blog/',
           algolia:{
-            applicationID: 'XDG1C6ASA4',
-            apiKey: 'eebdd0f1174b77269d954813961815bc',
+            applicationID: 'MZWDU7APU1',
+            apiKey: '56b336245024b26e2b463b8cbd09cf07',
             indexName: 'khiav-hexo-blog',
             hits:{ per_page: 10 },
             labels:{ "input_placeholder": "輸入搜尋內容", "hits_empty": "找不到「${query}」", "hits_stats": "找到 ${hits} 條相關條目，花費 ${time} 亳秒" }
