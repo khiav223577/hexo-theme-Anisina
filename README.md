@@ -190,7 +190,7 @@ Google Analytics and Baidu Tongji simple config:
 	ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 
 	#Google Analytics
-	ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+	ga_track_id: 'G-LERHN3QS29'            # Format: G-xxxxxx
 	ga_domain: huangxuan.me
 
 Just checkout the code offered by Google/Baidu, and copy paste here, all the rest is already done for you.
