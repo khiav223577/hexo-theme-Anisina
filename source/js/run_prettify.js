@@ -28,10 +28,15 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 */
-$('code').each(function(){
+
+$('figure.highlight').each(function(){
   var $this = $(this);
-  var oldClass = $this.attr('class');
-  if (oldClass) $this.attr('class', 'lang-' + oldClass);
+  var langs = $this.attr('class').split(" ").filter(function(item) { return item !== 'highlight'; });
+  var classNames = langs.map(function(s){ return "lang-" + s; }).join(' ');
+
+  $this.find('td.code > pre').html(function(_, html) {
+    return '<code class="' + classNames + '">' + html + '</code>';
+  });
 });
 
 (function(){function aa(g){function r(){try{L.doScroll("left")}catch(ba){k.setTimeout(r,50);return}x("poll")}function x(r){if("readystatechange"!=r.type||"complete"==z.readyState)("load"==r.type?k:z)[B](n+r.type,x,!1),!l&&(l=!0)&&g.call(k,r.type||r)}var X=z.addEventListener,l=!1,E=!0,v=X?"addEventListener":"attachEvent",B=X?"removeEventListener":"detachEvent",n=X?"":"on";if("complete"==z.readyState)g.call(k,"lazy");else{if(z.createEventObject&&L.doScroll){try{E=!k.frameElement}catch(ba){}E&&r()}z[v](n+
