@@ -36,52 +36,59 @@ layout: layout
 %>
 <!-- Main Content -->
 <div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- archive list -->
-            <% (page.posts || site.posts).sort('date', 'desc').each(function(post){ %>
-				<% var year = post.date.year(); %>
-				<% var month = post.date.format('MM'); %>
-				<% if (lastYear != year) { %>
-					<% if (lastYear != null) { %>
-					</div><!--month-->
-					</div><!--year-->
-					<% lastMonth = null; %>
-					<% } %>
-					<% lastYear = year; %>
-					<div class="archive archive-year" data-date="<%= year %>">
-						<h2 class="archive-title">
-						<span class="fa fa-archive">
-							<a href="<%- url_for(config.archive_dir + '/' + year) %>"> <%= year %></a>
-						</span>
-						</h2>
-				<% } %>
-				<% if (lastMonth != month) { %>
-					<% if (lastMonth != null) { %>
-					</div><!--month-->
-					<% } %>
-					<% lastMonth = month; %>
-					<div class="archive archive-month" data-date="<%= post.date.format('YYYYMM') %>">
-						<h3 class="archive-title">
-							<a href="<%- url_for(config.archive_dir + '/' + post.date.format('YYYY/MM')) %>"><%= parseInt(month) %>月</a>
-						</h3>
-				<% } %>
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="<%- config.root %><%- post.path %>">
-                        <h4 class="post-title">
-                            <%- post.title || "Untitled" %>
-                        </h4>
-                        <% if (post.subtitle && post.subtitle.length) { %>
-                        <h4 class="post-subtitle">
-                            <%- post.subtitle %>
-                        </h4>
-                        <% } %>
-                    </a>
-                </div>
-				<hr>
-				</div>
-            <% }) %>
-        </div>
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <!-- archive list -->
+      <%
+        // group posts by year
+        const postsByYear = {};
+        (page.posts || site.posts).sort('date', 'desc').each(function(post){
+          const year = post.date.year();
+          if (!postsByYear[year]) postsByYear[year] = [];
+          postsByYear[year].push(post);
+        });
+
+        const years = Object.keys(postsByYear).sort((a,b) => b - a);
+      %>
+      <section>
+        <% years.forEach(function(year){ %>
+          <div class="archive archive-year">
+            <h2 class="archive-title">
+              <span class="fa fa-archive" style="font-size: 20px;"></span>
+              <a  style="margin-left: 6px;" href="<%- url_for(config.archive_dir + '/' + year) %>"> <%= year %></a>
+            </h2>
+            <ul class="post-list">
+              <% postsByYear[year].forEach(function(post){ %>
+                <li class="post-list-item with_section">
+                  <div class="post-image-cover-container">
+                    <% if (post['header-img']) { %>
+                      <img class="" src="<%= post['header-img'] %>" alt="cover">
+                    <% } else { %>
+                      <img class="" src="https://ui-avatars.com/api/?background=f5f5f5&name=<%= post.title.slice(0, 2) %>">
+                    <% } %>
+                  </div>
+                  <section class="post-list-item-section">
+                    <p>
+                      <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+                    </p>
+                    <% if (post.subtitle && post.subtitle.length) { %>
+                      <p class="post-subtitle">
+                        <%= post.subtitle %>
+                      </p>
+                    <% } %>
+
+                    <time datetime="<%= post.date.toISOString() %>">
+                      <a href="<%- url_for(config.archive_dir + '/' + post.date.format('YYYY/MM')) %>">
+                        <%= date(post.date, 'YYYY-MM-DD') %>
+                      </a>
+                    </time>
+                  </section>
+                </li>
+              <% }) %>
+            </ul>
+          </div>
+        <% }) %>
+      </section>
     </div>
-    </div>
+  </div>
+</div>

@@ -144,7 +144,7 @@ hr{
   line-height: 20px;
 
   display: -webkit-box;
-  -webkit-line-clamp: 2;      /* 限制 3 行 */
+  -webkit-line-clamp: 2; /* 限制 2 行 */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -187,6 +187,48 @@ hr{
 }
 .archive-list-count:after{
   content: ')';
+}
+
+/* ---------------------------------------------------------------- */
+/* ● Archive */
+/* ---------------------------------------------------------------- */
+.archive .post-list{
+  margin-bottom: 50px;
+}
+
+.archive .post-list-item-section{
+  font-size: 18px;
+}
+
+.archive .post-subtitle{
+  font-size: 14px;
+}
+
+.archive .post-image-cover-container{
+  width: 64px;
+  height: 64px;
+  margin-right: 12px;
+}
+
+.archive .post-image-cover-container img{
+  width: 64px;
+  height: 64px;
+}
+
+.archive .post-list-item-section{
+  min-height: 80px;
+}
+
+.archive .post-list-item-section p a{
+  line-height: 32px;
+  -webkit-line-clamp: 1; /* 限制 1 行 */
+}
+
+.archive .post-subtitle{
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 限制 1 行 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 body {
