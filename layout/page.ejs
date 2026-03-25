@@ -257,8 +257,8 @@ layout: layout
           <% } %>
           <% /*------- 友情連結 -------*/ %>
           <% if(config.friends){ %>
-            <section>
-              <hr>
+            <hr>
+            <section class="home-page-section">
               <h5 style="text-align: center;">友情連結</h5>
               <ul class="list-inline" style="text-align: center;">
                 <% config.friends.forEach(function(friend){ %>
@@ -268,7 +268,8 @@ layout: layout
             </section>
           <% } %>
           <% /*------- 最新文章 -------*/ %>
-            <section>
+            <hr>
+            <section class="home-page-section">
               <h5 style="text-align: center;">最新文章</h5>
               <div class="widget tag">
                 <%#- list_posts() %>
@@ -297,9 +298,9 @@ layout: layout
               </div>
             </section>
           <% /*------- 所有文章 -------*/ %>
+          <hr>
           <% if (site.posts.length){ %>
-            <section>
-              <hr>
+            <section class="home-page-section">
               <h5 style="text-align: center;">所有文章</h5>
               <div class="widget tag">
                 <%- list_archives({type: 'yearly', format: "YYYY年"}) %>

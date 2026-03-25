@@ -130,7 +130,6 @@ hr{
 }
 
 .post-list-item-section{
-  border-bottom: 1px solid #e3e3e3;
   min-height: 64px;
 }
 
@@ -198,6 +197,7 @@ hr{
 
 .archive .post-list-item-section{
   font-size: 18px;
+  border-bottom: 1px solid #e3e3e3;
 }
 
 .archive .post-subtitle{
@@ -652,6 +652,10 @@ article blockquote cite:before{
   .intro-header {
     height: 370px;
   }
+}
+
+.home-page-section{
+  margin: 20px 0;
 }
 
 .post-preview > a {
