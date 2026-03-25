@@ -164,15 +164,23 @@ hr{
 .archive-list-item{
   list-style: none;
   text-align: center;
+  font-size: 16px;
+  clear: both;
 }
 .archive-list-link{
-  display: block;
+  display: inline-block;
+  width: 144px;
+  text-align: right;
+  float: left;
+  letter-spacing: 2px;
 }
 .archive-list-count{
   display: block;
-  padding-left: 100px;
-  margin-top: -22px;
   font-size: 12px;
+  float: right;
+  line-height: 28px;
+  color: #717171;
+  margin-right: 10px;
 }
 .archive-list-count:before{
   content: '(';
