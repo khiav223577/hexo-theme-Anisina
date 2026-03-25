@@ -272,7 +272,27 @@ layout: layout
               <hr>
               <h5 style="text-align: center;">最新文章</h5>
               <div class="widget tag">
-                <%- list_posts() %>
+                <%#- list_posts() %>
+                <ul class="post-list">
+                  <% site.posts.sort('date', -1).limit(6).forEach(function(post){ %>
+                    <li class="post-list-item with_section">
+                      <% if (post.cover) { %>
+                        <img class="post-list-item-image" src="<%= post.cover %>" alt="cover">
+                      <% } else { %>
+                        <img class="post-list-item-image" src="https://ui-avatars.com/api/?background=f5f5f5&name=<%= post.title.slice(0, 2) %>">
+                      <% } %>
+                      <section class="post-list-item-section">
+                        <p>
+                          <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+                        </p>
+
+                        <time datetime="<%= post.date.toISOString() %>">
+                          <%= date(post.date, 'YYYY-MM-DD') %>
+                        </time>
+                      </section>
+                    </li>
+                  <% }) %>
+                </ul>
               </div>
             </section>
           <% /*------- 所有文章 -------*/ %>
