@@ -55,8 +55,13 @@ layout: layout
           <div class="archive archive-year">
             <h2 class="archive-title">
               <span class="fa fa-archive" style="font-size: 20px;"></span>
-              <a  style="margin-left: 6px;" href="<%- url_for(config.archive_dir + '/' + year) %>"> <%= year %></a>
+              <a style="margin-left: 6px;" href="<%- url_for(config.archive_dir + '/' + year) %>"><%= year %></a>
             </h2>
+            <% if (page.month) { %>
+              <h4 class="archive-title">
+                <%= page.month %> 月
+              </h4>
+            <% } %>
             <ul class="post-list">
               <% postsByYear[year].forEach(function(post){ %>
                 <li class="post-list-item with_section">
