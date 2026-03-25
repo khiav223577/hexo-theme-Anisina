@@ -85,13 +85,50 @@ hr{
   clear: both;
 }
 
-.post-list-item-image{
+.post-image-cover-container{
   width: 48px;
   height: 48px;
   float: left;
-  object-fit: cover;
   border-radius: 6px;
   margin-right: 6px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.post-image-cover-container img.scale4{
+  width: 192px;
+  height: 192px;
+  object-fit: cover;
+
+  margin-left: -150%; /* (100.0 - 400) / 2 */
+  margin-top: -150%; /* (100.0 - 400) / 2 */
+}
+
+.post-image-cover-container img.scale3{
+  width: 144px;
+  height: 144px;
+  object-fit: cover;
+
+  margin-left: -100%; /* (100.0 - 300) / 2 */
+  margin-top: -100%; /* (100.0 - 300) / 2 */
+}
+
+.post-image-cover-container img.scale2{
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+
+  margin-left: -50%; /* (100.0 - 200) / 2 */
+  margin-top: -50%; /* (100.0 - 200) / 2 */
+}
+
+.post-image-cover-container img.scale0-8{
+  width: 38.4px;
+  height: 38.4px;
+  object-fit: cover;
+
+  margin-left: 10%; /* (100.0 - 80) / 2 */
+  margin-top: 10%; /* (100.0 - 80) / 2 */
 }
 
 .post-list-item-section{

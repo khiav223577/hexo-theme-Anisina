@@ -276,11 +276,13 @@ layout: layout
                 <ul class="post-list">
                   <% site.posts.sort('date', -1).limit(6).forEach(function(post){ %>
                     <li class="post-list-item with_section">
-                      <% if (post.cover) { %>
-                        <img class="post-list-item-image" src="<%= post.cover %>" alt="cover">
-                      <% } else { %>
-                        <img class="post-list-item-image" src="https://ui-avatars.com/api/?background=f5f5f5&name=<%= post.title.slice(0, 2) %>">
-                      <% } %>
+                      <div class="post-image-cover-container">
+                        <% if (post['header-img']) { %>
+                          <img class="scale2" src="<%= post['header-img'] %>" alt="cover">
+                        <% } else { %>
+                          <img class="scale0-8" src="https://ui-avatars.com/api/?background=f5f5f5&name=<%= post.title.slice(0, 2) %>">
+                        <% } %>
+                      </div>
                       <section class="post-list-item-section">
                         <p>
                           <a href="<%= url_for(post.path) %>"><%= post.title %></a>
